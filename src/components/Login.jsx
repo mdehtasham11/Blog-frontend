@@ -80,6 +80,11 @@ function Login() {
               })}
             />
             {errors.password && <p className="text-ink text-xs font-sans mt-1 mb-3">{errors.password.message}</p>}
+            <div className="text-right mb-4">
+              <Link to="/forgot-password" className="font-sans text-xs text-ink/60 underline underline-offset-2">
+                Forgot password?
+              </Link>
+            </div>
           </div>
           <div className="pt-2">
             <Button type="submit" className="w-full justify-center" disabled={loading}>

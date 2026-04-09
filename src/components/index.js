@@ -13,4 +13,5 @@ export { default as Logoutbtn } from './Header/Logoutbtn'
 export { default as Select } from './Select'
 export { default as RTE } from '../pages/RTE'
 export { default as CommentSection } from './CommentSection'
-
+export { default as ForgotPassword } from "./ForgotPassword";
+export { default as ResetPassword } from "./ResetPassword";
