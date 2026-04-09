@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Light Mode Tokens ─── */
+:root {
+  --color-paper:      #f2f0eb;
+  --color-paper-dark: #e8e5de;
+  --color-white:      #faf8f4;
+  --color-rule:       #d4d0c8;
+  --color-ink-faint:  #999890;
+  --color-ink-mid:    #555550;
+  --color-ink:        #1a1a1a;
+}
+
+/* ─── Dark Mode Tokens ─── */
+.dark {
+  --color-paper:      #141412;
+  --color-paper-dark: #1e1c1a;
+  --color-white:      #1a1816;
+  --color-rule:       #2e2c28;
+  --color-ink-faint:  #6b6960;
+  --color-ink-mid:    #a8a49c;
+  --color-ink:        #f2f0eb;
+}
+
+@layer base {
+  html { font-size: 16px; }
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: 'Source Sans 3', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    color: var(--color-ink);
+  }
+  /* Fluid hero title */
+  .hero-title {
+    font-size: clamp(1.6rem, 5vw, 2.8rem);
+  }
+  /* Drop cap for post first paragraph */
+  .drop-cap::first-letter {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 4rem;
+    font-weight: 700;
+    float: left;
+    line-height: 0.75;
+    margin-right: 0.1em;
+    margin-top: 0.1em;
+    color: var(--color-ink);
+  }
+}

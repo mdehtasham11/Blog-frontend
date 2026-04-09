@@ -1,0 +1,15 @@
+/* App-specific styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Test to verify CSS is loading */
+.test-css-loading {
+  background-color: red !important;
+}
+
