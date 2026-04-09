@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import store from "./store/store.js";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home.jsx";
-import { AuthLayout, Login, Signup } from "./components/index.js";
+import { AuthLayout, Login, Signup, ForgotPassword, ResetPassword } from "./components/index.js";
 import AdminLayout from "./components/AdminLayout";
 
 import AddPost from "./pages/AddPost";
@@ -37,6 +37,22 @@ const router = createBrowserRouter([
         element: (
           <AuthLayout authentication={false}>
             <Signup />
+          </AuthLayout>
+        ),
+      },
+      {
+        path: "/forgot-password",
+        element: (
+          <AuthLayout authentication={false}>
+            <ForgotPassword />
+          </AuthLayout>
+        ),
+      },
+      {
+        path: "/reset-password",
+        element: (
+          <AuthLayout authentication={false}>
+            <ResetPassword />
           </AuthLayout>
         ),
       },
