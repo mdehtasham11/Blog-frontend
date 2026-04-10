@@ -48,3 +48,7 @@ build/
 # OS
 Thumbs.db
 
+# Claude / AI tooling
+.claude/
+.superpowers/
+
